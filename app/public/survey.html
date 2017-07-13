@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder Survey</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<!-- JQuery -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- AZMind CSS http://azmind.com/bootstrap-multi-step-form-free/ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+
+</head>
+<body>
+
+<!-- Top menu -->
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">Friend Finder</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="top-navbar-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+                        	<a href="/survey">Find a Friend </a>
+	                    </li>
+	                    <li>
+	                    	<a href="/api/friends"> API Friends List </a>
+	                    </li>
+	                    <li>
+	                    	<a href="https://github.com/sundropgold/FriendFinder"> GitHub Repository</a>
+	                    </li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+        
+        <!-- Description -->
+		<div class="description-container">
+	        <div class="container">
+	        	<div class="row">
+	                <div class="col-sm-12 description-title">
+	                    <h2>Friend Finder Survey</h2>
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="col-sm-12 description-text">
+	                    <div class="divider-1">. . . . . . . . . . . . . . . .</div>
+	                </div>
+	            </div>
+			</div>
+		</div>
+		
+		<!-- Multi Step Form -->
+		<div class="msf-container">
+	        <div class="container">
+	        	<div class="row">
+	                <div class="col-sm-12 msf-title">
+	                    <h3>Complete The Form</h3>
+	                    <p>Fill out each question with a response from a scale of 1 (hate) to 5 (love). Please complete the form in its entirety to get access to our friend finding magic.</p>
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="col-sm-12 msf-form">
+	                    
+	                    <form role="form" action="" method="post" class="form-inline">
+	                    	
+	                    	<fieldset>
+	            				<h4>About You <span class="step">(Step 1 / 12)</span></h4>
+	            				<div class="form-group">
+				                    <label for="name">Name:</label><br>
+				                    <input type="text" name="name" class="name form-control" id="name" required>
+				                </div>
+				               
+	            				<br>
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+	            			
+	            			<fieldset>
+	            				<h4>Link to Profile Picture <span class="step">(Step 2 / 12)</span></h4>
+	            				<div class="form-group">
+				                    <label for="profile-picture">Profile Picture:</label><br>
+				                    <input type="text" name="profilepic" class="profilepic form-control" id="profilepic" required>
+				                </div>
+				            
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+	            			
+	            			<fieldset>
+	            				<h4>Question 1 <span class="step">(Step 3 / 12)</span></h4>
+				                <div class="radio-buttons-1">
+				                	<p>Radio Buttons 1:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 2 <span class="step">(Step 4 / 12)</span></h4>
+	            				<div class="radio-buttons-2">
+									<p>Radio Buttons 2:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 3 <span class="step">(Step 5 / 12)</span></h4>
+	            				<div class="radio-buttons-3">
+									<p>Radio Buttons 3:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 4 <span class="step">(Step 6 / 12)</span></h4>
+	            				<div class="radio-buttons-4">
+									<p>Radio Buttons 4:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 5 <span class="step">(Step 7 / 12)</span></h4>
+	            				<div class="radio-buttons-5">
+									<p>Radio Buttons 2:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 6 <span class="step">(Step 8 / 12)</span></h4>
+	            				<div class="radio-buttons-6">
+									<p>Radio Buttons 6:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 7 <span class="step">(Step 9 / 12)</span></h4>
+	            				<div class="radio-buttons-7">
+									<p>Radio Buttons 7:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 8 <span class="step">(Step 10 / 12)</span></h4>
+	            				<div class="radio-buttons-8">
+									<p>Radio Buttons 8:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 9 <span class="step">(Step 11 / 12)</span></h4>
+	            				<div class="radio-buttons-9">
+									<p>Radio Buttons 9:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Question 10 <span class="step">(Step 12 / 12)</span></h4>
+	            				<div class="radio-buttons-10">
+									<p>Radio Buttons 10:</p>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-1" required> Option 1
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-2"> Option 2
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-3"> Option 3
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-4"> Option 4
+					                </label>
+					                <label class="radio-inline">
+					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-5"> Option 5
+					                </label>
+								</div>
+	            				
+	            				<br>
+	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+
+	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+	                    	
+	                    </form>
+	                    
+	                </div>
+	            </div>
+			</div>
+		</div>
+
+<button type="submit" class="btn">Submit</button>
+
+	 <!-- Javascript -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+	<script type="text/javascript" src="../data/friends.js"></script>
+</body>
+</html>
