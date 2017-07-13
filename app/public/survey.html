@@ -40,11 +40,13 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">Friend Finder</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
+						<li>
+                        	<a href="/">Home </a>
+	                    </li>
 						<li>
                         	<a href="/survey">Find a Friend </a>
 	                    </li>
@@ -81,13 +83,13 @@
 	        	<div class="row">
 	                <div class="col-sm-12 msf-title">
 	                    <h3>Complete The Form</h3>
-	                    <p>Fill out each question with a response from a scale of 1 (hate) to 5 (love). Please complete the form in its entirety to get access to our friend finding magic.</p>
+	                    <p>Fill out each question with a response from a scale of 1 (strongly disagree/negative) to 5 (strongly agree/positive). Please complete the form in its entirety to get access to our friend finding magic.</p>
 	                </div>
 	            </div>
 	            <div class="row">
 	                <div class="col-sm-12 msf-form">
 	                    
-	                    <form role="form" action="" method="post" class="form-inline">
+	                    <form role="form" action="" method="post" class="form-inline" id="friendForm">
 	                    	
 	                    	<fieldset>
 	            				<h4>About You <span class="step">(Step 1 / 12)</span></h4>
@@ -103,7 +105,7 @@
 	            			<fieldset>
 	            				<h4>Link to Profile Picture <span class="step">(Step 2 / 12)</span></h4>
 	            				<div class="form-group">
-				                    <label for="profile-picture">Profile Picture:</label><br>
+				                    <label for="profile-picture">Profile Picture (image url link):</label><br>
 				                    <input type="text" name="profilepic" class="profilepic form-control" id="profilepic" required>
 				                </div>
 				            
@@ -115,21 +117,21 @@
 	            			<fieldset>
 	            				<h4>Question 1 <span class="step">(Step 3 / 12)</span></h4>
 				                <div class="radio-buttons-1">
-				                	<p>Radio Buttons 1:</p>
+				                	<p>How do you feel about pineapples on pizza?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-1-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-1-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-1-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-1-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-1-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -142,21 +144,21 @@
 	            			<fieldset>
 	            				<h4>Question 2 <span class="step">(Step 4 / 12)</span></h4>
 	            				<div class="radio-buttons-2">
-									<p>Radio Buttons 2:</p>
+									<p>How much do you support Donald Trump?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-2-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-2-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-2-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-2-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-2-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -169,21 +171,21 @@
 	            			<fieldset>
 	            				<h4>Question 3 <span class="step">(Step 5 / 12)</span></h4>
 	            				<div class="radio-buttons-3">
-									<p>Radio Buttons 3:</p>
+									<p>How do you feel about horoscopes/zodiacs?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-3-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-3-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-3-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-3-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-3-options" value="radio-buttons-3-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-3-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -196,21 +198,21 @@
 	            			<fieldset>
 	            				<h4>Question 4 <span class="step">(Step 6 / 12)</span></h4>
 	            				<div class="radio-buttons-4">
-									<p>Radio Buttons 4:</p>
+									<p>How often and enthusiastically use memes?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-4-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-4-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-4-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-4-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-4-options" value="radio-buttons-4-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-4-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -223,21 +225,21 @@
 	            			<fieldset>
 	            				<h4>Question 5 <span class="step">(Step 7 / 12)</span></h4>
 	            				<div class="radio-buttons-5">
-									<p>Radio Buttons 2:</p>
+									<p>If there were two guys on the moon and one of them killed the other with a rock, would that be fucked up or what?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-5-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-5-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-5-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-5-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-5-options" value="radio-buttons-5-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-5-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -250,21 +252,21 @@
 	            			<fieldset>
 	            				<h4>Question 6 <span class="step">(Step 8 / 12)</span></h4>
 	            				<div class="radio-buttons-6">
-									<p>Radio Buttons 6:</p>
+									<p>It's around 3AM at night (yes, at night), and you're up watching some funny video with your friends. It's been awhile since you've moved from your bed, but suddenly this creeping dread settles in your stomach. A few minutes later, you register that the metaphorical creeping dread is smoke! Smoke - as in FIRE! Fire in the hole!! Because you were so immersed in your video, you don't have much time to get out of your place anymore. You barely escape with a breath, but just as you've crossed out the front door, you realize - oh dear!! I've forgotten my dear (possibly hypothetical) pet. Would you go back inside the flaming, burning, hell heat for your pet?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-6-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-6-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-6-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-6-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-6-options" value="radio-buttons-6-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-6-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -277,21 +279,21 @@
 	            			<fieldset>
 	            				<h4>Question 7 <span class="step">(Step 9 / 12)</span></h4>
 	            				<div class="radio-buttons-7">
-									<p>Radio Buttons 7:</p>
+									<p>Do you think Gangnam Style deserved to be booted from its most played title on Youtube?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-7-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-7-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-7-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-7-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-7-options" value="radio-buttons-7-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-7-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -304,21 +306,21 @@
 	            			<fieldset>
 	            				<h4>Question 8 <span class="step">(Step 10 / 12)</span></h4>
 	            				<div class="radio-buttons-8">
-									<p>Radio Buttons 8:</p>
+									<p>Do you think Shrek 3 was ultimately inconsequential and unfunny in the whole overarching movie franchise and story of Shrek?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-8-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-8-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-8-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-8-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-8-options" value="radio-buttons-8-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-8-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -331,21 +333,21 @@
 	            			<fieldset>
 	            				<h4>Question 9 <span class="step">(Step 11 / 12)</span></h4>
 	            				<div class="radio-buttons-9">
-									<p>Radio Buttons 9:</p>
+									<p>Do you like pina coladas? Getting caught in the rain? Are you not into yoga? Do you have half a brain?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-9-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-9-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-9-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-9-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-9-options" value="radio-buttons-9-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-9-options" value="5"> 5
 					                </label>
 								</div>
 	            				
@@ -358,28 +360,29 @@
 	            			<fieldset>
 	            				<h4>Question 10 <span class="step">(Step 12 / 12)</span></h4>
 	            				<div class="radio-buttons-10">
-									<p>Radio Buttons 10:</p>
+									<p>You're in a busy coffeeshop, and you've finally gotten yourself a nice table next to a charger outlet. This coffeeshop is located in the city, and as we all know, you never leave your things alone in the city. You plan on staying there for the rest of the day (at least 5 hours) to do your homework (if you thought Javascript alone was bad, oh boy). As it turns out, an hour in and a big class of coffee downed, you really need to use the bathroom. You've been eyeing the bathroom for at least thirty minutes now, but the single-stall bathroom line's always been stacked to at least five people. Right now, the coffeeshop is still very busy, and there are people eyeing your very perfect table, but you really really really need the bathroom, and just for this moment - no bathroom line. Do you leave your table for the vultures?</p>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-1" required> Option 1
+					                	<input type="radio" name="radio-buttons-10-options" value="1" required> 1
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-2"> Option 2
+					                	<input type="radio" name="radio-buttons-10-options" value="2"> 2
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-3"> Option 3
+					                	<input type="radio" name="radio-buttons-10-options" value="3"> 3
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-4"> Option 4
+					                	<input type="radio" name="radio-buttons-10-options" value="4"> 4
 					                </label>
 					                <label class="radio-inline">
-					                	<input type="radio" name="radio-buttons-10-options" value="radio-buttons-10-option-5"> Option 5
+					                	<input type="radio" name="radio-buttons-10-options" value="5"> 5
 					                </label>
 								</div>
 	            				
 	            				<br>
 	            				<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
 
-	            				<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            				<button type="submit" class="btn" id="submitForm">Submit</button>
+
 	            			</fieldset>
 	                    	
 	                    </form>
@@ -388,8 +391,6 @@
 	            </div>
 			</div>
 		</div>
-
-<button type="submit" class="btn">Submit</button>
 
 	 <!-- Javascript -->
     <script src="assets/js/jquery-1.11.1.min.js"></script>
