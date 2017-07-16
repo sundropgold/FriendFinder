@@ -2,7 +2,7 @@
 // =============================================================
 
 var express = require("express");
-var bodyparser = require("body-parser");
+var bodyParser = require("body-parser");
 var path = require("path");
 
 // Sets up the Express App
@@ -17,22 +17,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Friends Data
-// =============================================================
-
-var friends = [];
-// name: string
-// photo: img url
-// scores: array of integers
-
 // Routing
 // =============================================================
 
+// serve static files
+
+app.use(express.static(path.join(__dirname, 'bootstrap')));
+app.use(express.static(path.join(__dirname, 'css')));
+app.use(express.static(path.join(__dirname, 'font-awesome')));
+app.use(express.static(path.join(__dirname, 'ico')));
+app.use(express.static(path.join(__dirname, 'img')));
+app.use(express.static(path.join(__dirname, 'js')));
+
 // api routes
-require('app/routing/apiRoutes.js')(app);
+require(path.join(__dirname, "./app/routing/apiRoutes.js"))(app);
 
 // html routes
-require('app/routing/htmlRoutes.js')(app);
+require(path.join(__dirname, './app/routing/htmlRoutes.js'))(app);
 
 // Start listening
 // =============================================================

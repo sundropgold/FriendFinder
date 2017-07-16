@@ -1,5 +1,7 @@
 var path = require("path");
 
+var friends = require("../data/friends-data.js");
+
 module.exports = function(app) {
 
 	// get JSON object of friends
@@ -17,11 +19,29 @@ module.exports = function(app) {
 
 		console.log(newFriend);
 
+		// handle compatability logic
+		var difference = 0;
+		var totalDifference = 0;
+
+		// question by question, compare the user's answers to  the friends array
+		for (var i = 0; i < friends.length; i++){
+
+			for (var j = 0; j < friends[i].score.length; j++){
+
+				// add up the differences to calculate the totalDifference
+				// use absolute value of differences
+				difference = Math.abs(newFriend.score[i] - friends[j].score[i]);
+				totalDifference = totalDifference + difference; 
+
+			}
+
+		}
+
+		// add newFriend to friends array
 		friends.push(newFriend);
 
 		res.json(newFriend);
 
-		// handle compatability logic
 	});
 
 };
