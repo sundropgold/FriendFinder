@@ -15,12 +15,12 @@ var PORT = process.env.PORT || 3000;
 // =============================================================
 // serve static files - css and js
 
-app.use("/bootstrap", express.static(path.join(__dirname, '/bootstrap')));
-app.use("/css", express.static(path.join(__dirname, '/css')));
-app.use("/font-awesome", express.static(path.join(__dirname, '/font-awesome')));
-app.use("/ico", express.static(path.join(__dirname, '/ico')));
-app.use("/img", express.static(path.join(__dirname, '/img')));
-app.use("/js", express.static(path.join(__dirname, '/js')));
+app.use("/css", express.static(path.join(__dirname, '/assets/bootstrap')));
+app.use("/fonts", express.static(path.join(__dirname, '/assets/bootstrap')));
+app.use("/js", express.static(path.join(__dirname, '/assets/bootstrap')));
+app.use("/css", express.static(path.join(__dirname, '/assets/css')));
+app.use("/js", express.static(path.join(__dirname, '/assets/js')));
+
 // Body Parser
 // =============================================================
 // Sets up the Express app to handle data parsing
