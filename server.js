@@ -15,12 +15,12 @@ var PORT = process.env.PORT || 3000;
 // =============================================================
 // serve static files - css and js
 
-app.use("/assets/bootstrap", express.static(path.join(__dirname, '/../public/assets/bootstrap')));
-app.use("/assets/css", express.static(path.join(__dirname, '/../public/assets/css')));
-app.use("/assets/js", express.static(path.join(__dirname, '/../public/assets/js')));
-app.use("/assets/font-awesome", express.static(path.join(__dirname, '/../public/assets/font-awesome')));
-app.use("/assets/ico", express.static(path.join(__dirname, '/../public/assets/ico')));
-app.use("/assets/img", express.static(path.join(__dirname, '/../public/assets/img')));
+app.use("./app/public/assets/bootstrap", express.static(path.join(__dirname, './app/public/assets/bootstrap')));
+app.use("./app/public/assets/css", express.static(path.join(__dirname, './app/public/assets/css')));
+app.use("./app/public/assets/js", express.static(path.join(__dirname, './app/public/assets/js')));
+app.use("./app/public/assets/font-awesome", express.static(path.join(__dirname, './app/public/assets/font-awesome')));
+app.use("./app/public/assets/ico", express.static(path.join(__dirname, './app/public/assets/ico')));
+app.use("./app/public/assets/img", express.static(path.join(__dirname, './app/public/assets/img')));
 
 // Body Parser
 // =============================================================

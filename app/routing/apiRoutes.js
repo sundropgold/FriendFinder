@@ -15,9 +15,25 @@ module.exports = function(app) {
 	app.post("/api/friends", function(req,res){
 
 		// handle incoming survey results
-		var newFriend = req.body;
+		var submission = req.body;
 
-		console.log(newFriend);
+		// save survey results in new object
+		var newFriend = {
+			name: submission.name,
+			photo: submission.photo,
+			score: [
+				parseInt(submission.score[0]),
+				parseInt(submission.score[1]),
+				parseInt(submission.score[2]),
+				parseInt(submission.score[3]),
+				parseInt(submission.score[4]),
+				parseInt(submission.score[5]),
+				parseInt(submission.score[6]),
+				parseInt(submission.score[7]),
+				parseInt(submission.score[8]),
+				parseInt(submission.score[9])
+			]
+		};
 
 		// handle compatability logic
 		var difference = 0;
@@ -35,32 +51,37 @@ module.exports = function(app) {
 				difference = Math.abs(newFriend.score[j] - friends[i].score[j]);
 				totalDifference = totalDifference + difference; 
 
-				console.log("totalDiff " + friends[i].name + ": " + totalDifference);
-
 			}
 
-			if (bestDifference == 0) {
+			// console.log("totalDifference: " + totalDifference);
+
+			if (bestDifference == 0 && i == 0) {
 				// if this is the first time going through the loop
 				// set bestDifference to totalDifference
 
-					bestDifference = totalDifference;
+				bestDifference = totalDifference;
+
+				// console.log("bestDiff1: " + friends[i].name + " " + bestDifference);
+			}
+
+			else if (totalDifference <= bestDifference) {
+				// if this isn't the first time going through the loop
+				// compare total diff to bestdiff
+
+				// if total is less than best, set best as total
+				bestDifference = totalDifference;
+
+				// console.log("bestDiff2: " + friends[i].name + " " + bestDifference);
+
+				// best friend will be the friend in the index position i
+				// save object into variable
+				bestFriend = friends[i];
+
+				if (i == 9) {
+					bestDifference = 0;
+
 				}
-
-			else {
-				if (totalDifference <= bestDifference) {
-					// if this isn't the first time going through the loop
-					// compare total diff to bestdiff
-
-					// if total is less than best, set best as total
-					bestDifference = totalDifference;
-
-					 console.log("best diff friend and score: " + friends[i].name + " and " + bestDifference);
-
-					 // best friend will be the friend in the index position i
-					 // save object into variable
-					 bestFriend = friends[i];
-					 bestDifference = 0;
-				}
+				
 			}
 
 			totalDifference = 0;
@@ -69,12 +90,9 @@ module.exports = function(app) {
 
 		// add newFriend to friends array
 		friends.push(newFriend);
+		res.json(bestFriend);
 
-		res.json(newFriend);
-
-		// set bestFriend back to default
-		bestFriend = {name: "default", photo: "default.png", score: [1,1,1,1,1,1,1,1,1,1]};
-
+		bestFriend = {};
 	});
 
 };
