@@ -23,6 +23,11 @@ var friends = [
 		name: "Mysterious Seagull",
 		photo: "https://placeimg.com/200/200/tech?t=1500404419405",
 		score: [2, 1, 3, 4, 5, 2, 2, 2, 2, 1] // 24
+	},
+	{
+		name: "Mysterious Sealion",
+		photo: "https://placeimg.com/200/200/tech?t=1500404419405",
+		score: [1, 1, 1, 1, 1, 1, 0, 0, 0, 0] // 6 
 	}
 
 ];
