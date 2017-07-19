@@ -1,3 +1,113 @@
+/* ********** GENERAL ********** */
 * {
-	background-color: pink;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+/* TITLE PAGE */
+.titlepg h1 {
+	overflow-y: hidden;
+}
+
+.titlepg {
+	font-family:'Raleway', sans-serif;
+}
+
+/* SURVEY PAGE */
+.description-container, .msf-container {
+	width:50%;
+	margin:0 auto;
+}
+
+.description-container {
+	margin-top:5%;
+}
+
+.msf-container {
+	margin-bottom:5%;
+}
+
+.msf-title, .msf-form {
+	width:50%;
+	margin:0 auto;
+}
+
+/* ********** NAVIGATION ********** */
+
+/* ********** TEXT ********** */
+* {
+	font-family: 'Raleway', sans-serif;
+}
+
+/* ********** MODAL WINDOW ********** */
+
+	.modal {
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 30%;
+		top: 25%;
+		width: 400px; 
+		height: 400px; 
+		overflow: hidden; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content/Box */
+	#modal-content {
+		font-family: "Raleway";
+		color:#fff;
+		background-color: transparent;
+		margin: 0 auto; /* 15% from the top and centered */
+		padding: 20px;
+		width: 300px; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button */
+	.close {
+		color: #fff;
+		float: right;
+		font-size: 50px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #aaa;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	#matchImg {
+		width:75%;
+	}
+
+/* ********** MEDIA QUERIES ********** */
+
+@media screen and (max-width:767px) {
+	
+	/* ********** GENERAL ********** */
+
+	.description-container, .msf-container {
+		width:80%;
+		margin:0 auto;
+	}
+
+	.description-title h1 {
+		overflow-y:hidden;
+	}
+
+	.description-container {
+		margin-top:5%;
+	}
+
+	.msf-container {
+		margin-bottom:5%;
+	}
+
+	.msf-title, .msf-form {
+		width:100%;
+		margin:0 auto;
+	}
+
 }
