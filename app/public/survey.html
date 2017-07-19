@@ -407,19 +407,6 @@
 					 parseInt(newFriend.score[i]);
 					}
 
-
-					console.log("js side new friend2: " + newFriend + 
-						"\n" + newFriend.score[0] +
-						"\n" + newFriend.score[1] +
-						"\n" + newFriend.score[2] +
-						"\n" + newFriend.score[3] +
-						"\n" + newFriend.score[4] +
-						"\n" + newFriend.score[5] +
-						"\n" + newFriend.score[6] +
-						"\n" + newFriend.score[7] +
-						"\n" + newFriend.score[8] +
-						"\n" + newFriend.score[9]);
-
 					$.post("/api/friends", newFriend).done(function(data){
 
 						// reset values back to blank

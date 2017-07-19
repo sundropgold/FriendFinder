@@ -53,7 +53,7 @@ module.exports = function(app) {
 
 			}
 
-			console.log("totalDifference: " + friends[i].name + " " + totalDifference);
+			// console.log("totalDifference: " + friends[i].name + " " + totalDifference);
 
 			if (bestDifference == 0 && i == 0) {
 				// if this is the first time going through the loop
@@ -61,7 +61,7 @@ module.exports = function(app) {
 
 				bestDifference = totalDifference;
 
-				console.log("bestDiff1: " + friends[i].name + " " + bestDifference);
+				// console.log("bestDiff1: " + friends[i].name + " " + bestDifference);
 			}
 
 			else if (totalDifference <= bestDifference) {
@@ -71,7 +71,7 @@ module.exports = function(app) {
 				// if total is less than best, set best as total
 				bestDifference = totalDifference;
 
-				console.log("bestDiff2: " + friends[i].name + " " + bestDifference);
+				// console.log("bestDiff2: " + friends[i].name + " " + bestDifference);
 
 				// best friend will be the friend in the index position i
 				// save object into variable
